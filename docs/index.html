@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Templating</title>
+	<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+	<style type="text/css">
+		*{padding:0px; margin:0px;}
+	</style>
+</head>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<body id='body' style="background: #0d1117; color:lightgrey">
+</body>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<script src="js/bug.js" type="text/javascript"></script>
+<!-- <script src="docs/js/general.js" type="text/javascript"></script> -->
+
+<script type="text/javascript">
+////////////////////////////////////////////////////////////////////////////////////////
+
+var data = {
+	thing:[ 'This is some inserted text.', 
+			'More text.',
+			'Each of these is automatically generated from an array.',
+			'Here have another.',
+			'The template is generated for each text item.',
+			"Then this text is inserted." ]
+}
+
+window.onload = function() {
+
+	loadBugs(['modules.html'], function (){
+	  	build(['reading'], 'body',() =>{});
+	})
+
+	Object.assign(comp, data);
+};
+</script>
+
+
+</html>
+<!-- Desktop\Programming\Bugs  C:\Users\ASUS\Desktop\USILACS-->
